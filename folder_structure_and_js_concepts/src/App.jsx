@@ -4,32 +4,34 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const lists = ["BLOGS", "ABOUT", "MERCH", "STORE"]
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    
+    <div className="header">
+      <h1>CALL ME BY YOUR NAME !</h1>
+      <h2><button href="#">{lists[0]}</button></h2>
+      <h2><button href="#">{lists[1]}</button></h2>
+      <h2><button href="#">{lists[2]}</button></h2>
+      <h2><button href="#">{lists[3]}</button></h2>
+
+      
+    </div>
+    <div className="box">
+        
+      <img src="https://i.pinimg.com/originals/ca/df/c3/cadfc3ab6e317c4bb868ec3fe6b8f4ef.jpg" alt="logo" />
+
+    </div>
+     <div className="footer">
+      MADE WITH LOVE COPYRIGHT 2023
+      </div> 
+
     </>
   )
 }
+
+
+ 
 
 export default App

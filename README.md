@@ -1,4 +1,4 @@
-# Task Distribution
+# Task Distribution (Babisha Manandhar / babishatakeo)
 
 This repositary will contain the solution for every student that are learning React JS as Frontend development. Here we will collaborate in the task and learn together.
 

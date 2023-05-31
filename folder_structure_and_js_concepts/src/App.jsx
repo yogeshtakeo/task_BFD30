@@ -24,7 +24,7 @@ function App() {
 
     </div>
      <div className="footer">
-      MADE WITH LOVE COPYRIGHT 2023
+      MADE WITH LOVE COPYRIGHT 2023.
       </div> 
 
     </>

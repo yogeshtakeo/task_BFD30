@@ -1,42 +1,48 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+.header {
+  height: 10vh;
+  width: 100vw;
+  font-family: cursive;
   text-align: center;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.main {
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.main-menu-box {
+  display: flex;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.two-menu-box {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main .menu-box {
+  height: 200px;
+  width: 200px;
+  border-style: solid;
+  border-color: rgb(67, 37, 37);
+  border-radius: 5%;
+  padding: 10px;
+  margin: 10px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.picture {
+  height: 420px;
+  width: 300px;
+  background-image: url("./images/crossiant1.jpg");
 }
-
-.card {
-  padding: 2em;
+.button {
+  background-color: rgb(67, 37, 37);
+  color: white;
 }
-
-.read-the-docs {
-  color: #888;
+.footer {
+  height: 10vh;
+  width: 100vw;
+  text-align: center;
 }

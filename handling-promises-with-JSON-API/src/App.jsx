@@ -23,4 +23,27 @@ function App() {
     .catch((error) => {
       console.error("Error", error);
     });
+    //2. Handle Promise Rejection
+  const wrongdataFetch = fetch("https://jsonplaceholder.typicode.com/pot");
+  console.log(wrongdataFetch);
+  wrongdataFetch
+    .then((response) => {
+      if (!response.ok) {
+        //this condition will check if there is any error while fetching url.If there is no error it will go to return (response.json).
+        console.log("Error; either Network issues or the url doesn't exist.");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) => {
+      //handles promiseRejection
+      console.log("You have encountered Errors", error);
+    });
+
+  return <></>;
   }
+
+export default App;
+  

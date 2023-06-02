@@ -1,35 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from "react";
+import "./App.css";
+
+console.log(React);
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [state, setState] = useState({});
+
+  console.log("Running line 7");
+
+  const getGithubInfo = async () => {
+    const jsonObject = await fetch("https://api.github.com/users/Namsla");
+    const jsObject = await jsonObject.json();
+    setState(jsObject);
+  };
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+      <p>
+        Task 10: Retrieve and Display GitHub Profile Using GitHub API and JSX
+        Components. Objective: Retrieve a student's GitHub profile data using
+        the GitHub API URL and display it using JSX components in a React
+        project.
       </p>
+      <div className="mainContainer">
+        <div className="card">
+          <img
+            className="Nams"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShzDwEmrBckbX8Xw7QraaiU-zfmIx4LpsW3g&usqp=CAU"
+          />
+          <h2>{state.name}</h2> <br />
+          <h3>Look to the right for number of followers</h3>
+          <h3> and number of poeple followed by Namkhang</h3> <br />
+        </div>
+
+        <div className="card2">
+          <img className="Nams" src={state.avatar_url} />
+          <h2>{state.login}</h2> <br />
+          <h3>Followers: {state.followers}</h3>
+          <h3>Following: {state.following}</h3> <br />
+          <button onClick={getGithubInfo}>Unlock The User</button>
+        </div>
+
+        <div className="card3">
+          <img
+            className="Nams"
+            src="https://media.tenor.com/2SeTinGEKNQAAAAd/codelikeagirl.gif"
+          />
+          <h2>{state.name}</h2> <br />
+          <h3>Account creation time: {state.created_at}</h3>
+          <h3> Account last updtated: {state.updated_at}</h3>
+        </div>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

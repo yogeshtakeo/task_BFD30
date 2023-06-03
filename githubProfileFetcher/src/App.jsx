@@ -4,30 +4,23 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [state, setState] = useState({})
+
+  const result = fetch('https://api.github.com/users/junuthapa011')
+    .then((jsonObject) => jsonObject.json())
+    .then((jsObject) => {
+       setState(jsObject)})
+    .catch((error) => console.log(error))
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="outer">
+        <div className="main">
+        <img className = "profileImage" src={state.avatar_url}></img>
+          <h2>Full name: {state.name}</h2>
+          <h3>Username: {state.login}</h3>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }

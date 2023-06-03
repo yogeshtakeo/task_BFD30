@@ -10,3 +10,15 @@ button{
   width:10rem;
   height:2rem;
 }
+.Items{
+  width:80rem;
+  display: flex;
+  
+}
+ul{
+  display: flex;
+}
+li{
+  list-style: none;
+  padding-left:1rem;
+}

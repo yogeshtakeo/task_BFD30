@@ -1,18 +1,40 @@
-.outline{
-  height:20rem;
-  width:30rem;
-  background-color: antiquewhite;
-  display:flex;
+body{
+  width:100%;
+  display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url('./todo.jpg');
+  background-position:cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-button{
-  width:10rem;
+.outline{
+  margin: 2rem;
+  width:60rem;
+  border: solid;
+  border-radius: 2rem;
+  border-color: rgba(228, 221, 109, 0.847);
+  background-color: rgba(235, 222, 196, 0.813);
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+}
+.dbtn{
+  width:2rem;
   height:2rem;
+  align-items: center;
+  
 }
+
 .Items{
-  width:80rem;
-  display: flex;
+ 
+  width:40rem;
+  display: flex; 
+  justify-content: space-between;
+  
+  position: relative;
   
 }
 ul{
@@ -21,4 +43,47 @@ ul{
 li{
   list-style: none;
   padding-left:1rem;
+  
+}
+.inputtask{
+  width:30rem;
+  height: 3rem;
+  border: solid;
+  border-width: 1px;
+  border-radius: 1rem;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+.box{
+  display: flex;
+
+} 
+.btn1{
+  border:solid;
+  border-radius: 1rem;
+  border-width: 1px;
+  width:8rem;
+  height:3rem;
+  margin-left: 1rem;
+}
+.check{
+  
+ position: absolute;
+ right: 1px;
+ margin-right: 3rem;
+ 
+ 
+}
+.tick{
+  width: 3rem;
+  height: 2rem;
+}
+.cross{
+  position: absolute;
+  right:2px;
+  
+}
+.box2{
+  width:45rem;
+ 
 }

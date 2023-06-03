@@ -1,28 +1,36 @@
 import './App.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function App() {
   const [state, setState] = useState({})
 
-  const profile = fetch('https://api.github.com/users/jharanatmg')
+  useEffect(() => {
+    
+    const profile = fetch('https://api.github.com/users/jharanatmg')
 
-  profile
-  .then((response) => {
-    const jsonPromise = response.json()
-    .then((jsPromise) => {
-      setState(jsPromise)
+    profile
+    .then((response) => {
+      const jsonPromise = response.json()
+      .then((jsPromise) => {
+        setState(jsPromise)
+      })
+      console.log('first')
     })
-  })
-  .catch((error) => console.log("Error", error))
+    .catch((error) => console.log("This is an error", error))
+    
+  }, [])
 
   return (
     <>
     <div className='box'> 
       <div className='card'>
+        <h1> GitHub Profile </h1>
+      </div>
+      <div className='one'>
         <img src={state.avatar_url}></img>
-      <p> Name: {state.login}</p>
-      <p> User: {state.id}</p>
-
+        <p> NAME: {state.login}</p>
+        <p> ID: {state.id}</p>
+        <p> URL: {state.html_url}</p>    
       </div>
     </div>
     </>

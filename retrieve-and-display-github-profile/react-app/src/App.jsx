@@ -1,33 +1,56 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useEffect, useState } from "react";
+import './App.css';
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [state, setState] = useState({});
+ 
+  useEffect(() => {
+  const getGithubInfo = async () => {
+    try{
+      const jsonObject = await fetch('https://api.github.com/users/sandessth');
+      const jsObject = await jsonObject.json();
+    setState(jsObject);
+    }
+    catch(error){
+      console.log("you got error!!!")
+    }
+  }
+    getGithubInfo();
+    
+  }, [])
 
+  const moreInfo = function(){
+    
+  }
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    
+      <div className="topMenu">
+        <h2>Task 10: Retrieve and Display GitHub Profile Using GitHub API and JSX Components.
+        </h2>
       </div>
-      <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+        <div className="infoCard">
+            <img className="pic" src = {state.avatar_url}/>
+            <h3 className="name">Name: "{state.name}"</h3>
+            <h3 className="name">ID: "{state.id}"</h3>
+            <h3 className="name">Login ID: "{state.login}"</h3>
+            <h3 className="name">Location: "{state.location}"</h3>
+            <h3 className="name">Created: "{state.created_at}"</h3>
+            <h3 className="name">Last Active: "{state.updated_at}"</h3>
+            <button onClick="https://api.github.com/users/sandessth"> More info </button>
+        </div>
+        {/* <div className="infoCard">
+            <img className="pic" src = {state.avatar_url}/>
+            <h3 className="name">Name: "{state.name}"</h3>
+            <h3 className="name">ID: "{state.id}"</h3>
+            <h3 className="name">Login ID: "{state.login}"</h3>
+            <h3 className="name">Location: "{state.location}"</h3>
+            <h3 className="name">Created: "{state.created_at}"</h3>
+            <h3 className="name">Last Active: "{state.updated_at}"</h3>
+        </div> */}
+        </div> 
     </>
   )
 }

@@ -1,37 +1,133 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-.outline{
-    height:100vh;
-    background: linear-gradient(to right, white, rgba(229, 228, 220, 0.888)60%,rgba(255, 255, 0, 0.973),yellow);
-    
-    display:flex;
+
+.outline {
+    height: auto;
+    background: linear-gradient(to right, white, rgba(229, 228, 220, 0.888)60%, rgba(255, 255, 0, 0.973), yellow);
+
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.box{
-    width:50rem;
-    height:30rem;
+.circle{
+    
+    border-width: 1px;
+    width:5rem;
+    height: 5rem;
     border:solid;
+    border-radius: 50rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.logo{
+    
+  
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.div{
+    width:12rem;
+    border: solid;
+    height: 0;
+    border-width: 1px;
+}
+
+.box {
     padding: 1rem;
+    width: 40rem;
+    height: 30rem;
+    border: solid;
+
 
 }
-.ul{
+
+.ul {
     display: flex;
-   
+
 }
-.ul li{
+
+.ul li {
     list-style: none;
 }
-a{
-    padding:2rem;
+
+a {
+    padding: 1rem;
     text-decoration: none;
     color: black;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 600;
 }
-.image{
-    float:right;
+
+.image {
+    float: right;
+    padding: 1rem;
+
+}
+
+.bio {
+    width: 100%;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+p {
     
+    margin: 2rem;
+}
+h2{
+    margin-bottom: 2rem;
+   
+    text-align: center;
+}
+
+.creator {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    text-align: right;
+}
+.read{
+    margin-left: 2rem;
+    display: block;
+    margin-top: 1rem;
+    background-color:rgb(218, 218, 87);
+    width:8rem;
+    padding:2px;
+    border: none;
+    height: 2rem;
+    text-align: center;
+    
+}
+.icon{
+   
+   padding-top: 0.5rem;
+   text-align: center;
+}
+.input{
+    border: solid;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    height: 1rem;
+    padding: 0.5rem;
+    border-width: 1px;
+}
+button{
+    height: 2rem;
+    width: 6rem;
+    margin-left: 0.5rem;
+    background-color: rgb(194, 193, 193);
+    border-width: 1px;
+    margin-right: 2rem;
+}
+.icon1{
+    margin-left: 2rem;
+    margin-top: 1rem;
+   
 }

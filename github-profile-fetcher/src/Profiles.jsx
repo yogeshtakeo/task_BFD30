@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import Model from "./Model.webp"
 
 const Profiles = () => {
    //useState
@@ -21,13 +22,20 @@ const Profiles = () => {
      }
      ProfileData()
    },[])
+
    return (
     <>
     <div className="outline">
-      <Profiles/>
-      <h2>{profile.login}</h2>
-          {profile.id}
-          <img src={profile.avatar_url} alt="Image" width="100px" height="200px"/>
+      <div className="box">
+        <ul className='ul'>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Photographs</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <img className="image" src={Model} alt="Image" width="300px" height="400px"/>
+      </div>
+      
           
           </div>
           

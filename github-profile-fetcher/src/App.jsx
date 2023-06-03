@@ -1,5 +1,5 @@
 import React,{ useEffect, useState } from 'react'
-import Profiles from './Profiles.js'
+import Profiles from './Profiles.jsx'
 import './App.css'
 
  function App() {
@@ -18,13 +18,11 @@ import './App.css'
 
   return (
     <>
-    <div className="outline">
+   
       <Profiles/>
-      <h2>{profile.login}</h2>
-          {profile.id}
-          <img src={profile.avatar_url} alt="Image" width="100px" height="200px"/>
+      
           
-          </div>
+          
           
     </>
   )

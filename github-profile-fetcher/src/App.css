@@ -1,5 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .outline{
-    width:20rem;
-    height:20rem;
-    background-color: antiquewhite;
+    height:100vh;
+    background: linear-gradient(to right, white, rgba(229, 228, 220, 0.888)60%,rgba(255, 255, 0, 0.973),yellow);
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width:50rem;
+    height:30rem;
+    border:solid;
+    padding: 1rem;
+
+}
+.ul{
+    display: flex;
+   
+}
+.ul li{
+    list-style: none;
+}
+a{
+    padding:2rem;
+    text-decoration: none;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+}
+.image{
+    float:right;
+    
 }

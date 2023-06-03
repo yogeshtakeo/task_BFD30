@@ -24,6 +24,7 @@ function App() {
         title: newState,
         completed: false,
       }
+  
     }
     setState([...tasks, newStateObj])
     setNewState('')

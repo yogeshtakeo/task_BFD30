@@ -14,7 +14,7 @@ function TodoApp() {
     const getData = async () => {
       try {
         const jsonObject = await fetch(
-          "https://jsonplaceholder.typicode.com/todos/"
+          "https://jsonplaceholder.typicode.com/todos/?_limit=5"
         );
         const jsObject = await jsonObject.json();
         setTask(jsObject);
@@ -31,17 +31,17 @@ function TodoApp() {
     //we will create an object
     console.log(newTask);
     const taskName = {
-      id: task.slice(0, 10).length + 1, //Slice basically allows to manipulate length of array. Syntax(.slice(0, todesiredlength i.e 3))
+      id: task.length + 1, //Slice basically allows to manipulate length of array. Syntax(.slice(0, todesiredlength i.e 3))
       title: newTask,
       completed: false,
     };
-    const getolddata = [...task.slice(0, 10), taskName];
+    const getolddata = [...task, taskName];
     setTask(getolddata);
     setnewTask("");
   };
   const deleteTask = (id) => {
     //the filter will check the id in newArray is not equal to the one we clicked.
-    const newArray = task.slice(0, 10).filter((item) => item.id !== id); //we will create newArray will have task excluding the task we want to delete
+    const newArray = task.slice(0,5).filter((item) => item.id !== id); //we will create newArray will have task excluding the task we want to delete
     setTask(newArray); // updates our array onClick
   };
 
@@ -62,33 +62,32 @@ function TodoApp() {
             Add
           </button>
         </div>
-        <div className="box2">
-        {task.slice(0,10).map((items) => (
-          <div className="Items" key={items.id}>
-            <ul>
-              <li>{items.id}</li>
-              <li>{items.title}</li>
-              <div className="check">
-              <li>
-                <input className="tick"
-                  type="checkbox"
-                  checked={items.completed}
-                  onChange={(e) => setnewTask(e.target.value)}
-                />
-              </li>
-              </div>
+        
+          {task.map((items) => (
+            <div className="Items" key={items.id}>
+              <ul>
+                <li>{items.id}</li>
+                <li>{items.title}</li>
+                <div className="check">
+                  <li>
+                    <input
+                      className="tick"
+                      type="checkbox"
+                      checked={items.completed}
+                      onChange={(e) => setnewTask(e.target.value)}
+                    />
+                  </li>
+                </div>
 
-              <div className="cross">
-                <button className="dbtn" onClick={deleteTask}>
-                  X
-                </button>
-                
-              </div>
-            </ul>
-            
-          </div>
-        ))}
-      </div>
+                <div className="cross">
+                  <button className="dbtn" onClick={deleteTask}>
+                    X
+                  </button>
+                </div>
+              </ul>
+            </div>
+          ))}
+        
       </div>
     </>
   );

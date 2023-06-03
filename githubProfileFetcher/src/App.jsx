@@ -23,7 +23,7 @@ function App() {
         <div className="main">
         <img className = "profileImage" src={state.avatar_url}></img>
           <h2>Full name: {state.name}</h2>
-          <h3>Username: {state.login}</h3>
+          <a href = "https://github.com/junuthapa011"><h3>Username: {state.login}</h3></a>
         </div>
       </div>
     </>

@@ -39,17 +39,8 @@ function App() {
             <h3 className="name">Location: "{state.location}"</h3>
             <h3 className="name">Created: "{state.created_at}"</h3>
             <h3 className="name">Last Active: "{state.updated_at}"</h3>
-            <button onClick="https://api.github.com/users/sandessth"> More info </button>
+            <a href = 'https://api.github.com/users/sandessth'> Goto api.git </a>
         </div>
-        {/* <div className="infoCard">
-            <img className="pic" src = {state.avatar_url}/>
-            <h3 className="name">Name: "{state.name}"</h3>
-            <h3 className="name">ID: "{state.id}"</h3>
-            <h3 className="name">Login ID: "{state.login}"</h3>
-            <h3 className="name">Location: "{state.location}"</h3>
-            <h3 className="name">Created: "{state.created_at}"</h3>
-            <h3 className="name">Last Active: "{state.updated_at}"</h3>
-        </div> */}
         </div> 
     </>
   )

@@ -33,12 +33,17 @@ function Profile() {
         <div className="wrapper">
           <div className="cat_pic"></div>
           <div className="description">
-            <div className="cat_des">this is cat description</div>
+            <div className="cat_des">
+              <h3>My name: Billi</h3>
+              <h4>I am 2 years old</h4>
+              <p>I love to eat wet food</p>
+            </div>
             <div className="authority">
               <div className="authority_pic">
-                <img src={state.avatar} />
+                <img src={state.avatar_url} />
               </div>
-              <h5>{state.name}</h5>
+              <h5>Contact : {state.name}</h5>
+              <p>Followers : {state.followers}</p>
             </div>
           </div>
         </div>

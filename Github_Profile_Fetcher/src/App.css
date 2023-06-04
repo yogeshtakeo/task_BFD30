@@ -24,7 +24,7 @@
 .cat_pic {
   height: 250px;
   width: 250px;
-  background-color: blue;
+  background-image: url("./cat1.jpg");
   border-radius: 30%;
 }
 .description {
@@ -37,17 +37,27 @@
 .cat_des {
   height: 150px;
   width: 200px;
+  padding: 10px;
+  text-align: center;
   border: solid;
-  border-color: pink;
+  border-color: rgb(247, 247, 188);
 }
 .authority {
   height: 150px;
   width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: solid;
-  border-color: pink;
+  border-color: rgb(247, 247, 188);
 }
 .authority_pic {
   height: 100px;
   width: 100px;
-  border-radius: 50%;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
 }

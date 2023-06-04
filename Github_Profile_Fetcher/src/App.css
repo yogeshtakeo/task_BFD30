@@ -2,3 +2,52 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  height: 20vh;
+  width: 100vw;
+  text-align: center;
+  background-color: rgb(247, 247, 188);
+
+  padding: 20px;
+}
+.wrapper {
+  padding: 10px;
+}
+.cat_pic {
+  height: 250px;
+  width: 250px;
+  background-color: blue;
+  border-radius: 30%;
+}
+.description {
+  height: 20vh;
+  width: 100vw;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.cat_des {
+  height: 150px;
+  width: 200px;
+  border: solid;
+  border-color: pink;
+}
+.authority {
+  height: 150px;
+  width: 200px;
+  border: solid;
+  border-color: pink;
+}
+.authority_pic {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}

@@ -1,42 +1,98 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+h1 {
+  font-family: Bradley Hand, cursive;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: black;
+}
+
+#quote {
   text-align: center;
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  font-weight: lighter;
+  font-size: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#address {
+  font-size: small;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  background-image: url("./toDopic.jpeg");
+  background-position: cover;
+  background-repeat: repeat;
+  background-position: bottom left;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
 .card {
-  padding: 2em;
+  margin: 2px;
+  width: 50%;
+  border: solid grey 3px;
+  background-image: url("./pic.webp");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  padding-bottom: 20px;
+  border-radius: 2rem;
 }
 
-.read-the-docs {
-  color: #888;
+.cross {
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+}
+
+.lists {
+  width: 40rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+.listTask {
+  width: 30rem;
+  height: 3rem;
+  border: solid blue 10rem;
+  border-width: 1px;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.addButton {
+  border: solid blue 10rem;
+  border-width: 1px;
+  width: 8rem;
+  height: 3rem;
+  margin-left: 1rem;
+}
+.check {
+  position: absolute;
+  right: 1px;
+  margin-right: 3rem;
+}
+.checkMark {
+  width: 3rem;
+  height: 2rem;
+}
+.crossOut {
+  position: absolute;
+  right: 2px;
+}
+
+.container {
+  height: 5rem;
+  width: fit-content;
 }

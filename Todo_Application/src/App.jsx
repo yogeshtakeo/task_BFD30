@@ -10,7 +10,11 @@ function App() {
   //   const jsonObject = fetch();
   // };
 
-  return <>{TodoApp()}</>;
+  return (
+    <>
+      <TodoApp />
+    </>
+  );
 }
 
 export default App;

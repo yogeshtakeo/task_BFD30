@@ -8,12 +8,12 @@ function TodoApp() {
   // console.log(todoList);
 
   //This usestate is for adding the task
-  const [addTask, setAddTask] = useState("");
+  // const [addTask, setAddTask] = useState("");
   useEffect(() => {
     const getData = async () => {
       try {
         const jsonObject = await fetch(
-          "https://jsonplaceholder.typicode.com/todos/?_limit=10"
+          "https://jsonplaceholder.typicode.com/todos/?_limit=7"
         );
         console.log(jsonObject);
         const jsObject = await jsonObject.json();
@@ -26,10 +26,12 @@ function TodoApp() {
 
     getData();
   }, []);
+  // function AddTask() {}
 
   return (
     <>
       <div className="main">
+        <h1>To Do Lists </h1>
         <button className="button">ADD</button>
         <div className="todolist">
           {todo.map((tasks) => (
@@ -37,6 +39,8 @@ function TodoApp() {
               <ul>
                 <li>{tasks.id}</li>
                 <li>{tasks.title}</li>
+                <input type="checkbox" id="check" />
+                <button className="cross-button">x</button>
               </ul>
             </div>
           ))}

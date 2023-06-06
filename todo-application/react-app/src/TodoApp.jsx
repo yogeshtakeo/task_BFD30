@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 function TodoApp() {
 
-    const [newTask, setNewTask] = useState([]);
+    const [list, setList] = useState([]);
     
     const [taskName, setTaskName] = useState("");
     useEffect(() => {
@@ -13,7 +13,7 @@ function TodoApp() {
           try{
             const jsonObject = await fetch('https://jsonplaceholder.typicode.com/todos/');
             const jsObject = await jsonObject.json();
-            setNewTask(jsObject);
+            setList(jsObject);
           }
           catch(error){
             console.log("you got error!!!")
@@ -24,9 +24,8 @@ function TodoApp() {
         }, []);
 
         const addNewTask= () => {
-
-            const newTask = {
-                id: newTask.length+1,
+            const newList = {
+                id: 1,
                 title: taskName,
                 completed: false,
                 date: new Date().toTimeString().split(" ")[0],
@@ -53,14 +52,15 @@ function TodoApp() {
                         </div>
                     
                     
-                        {newTask.map((list) => (
+                        {list.map((lists) => (
                             <div className="bar2">
                                 <div className="lists">
                                     <div className="lists2">
-                                        <p>{list.id}.  {list.title}</p>
+                                        <p>{lists.id}.  {lists.title}</p>
+                                        
                                     </div>
-                                    <div className="buttons">    
-                                        <input type="checkbox" id={list.id}/>
+                                    <div className="buttons">  
+                                        <input type="checkbox" className="checkB" id={lists.id}/>
                                         <button>delete</button>
                                     </div>
                                 </div>

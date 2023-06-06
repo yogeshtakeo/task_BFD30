@@ -1,7 +1,6 @@
 import React from "react";
-import { useEffect, useState } from "react";import "./todoApp.jsx";
+import { useEffect, useState } from "react";
 import "./App.css";
-import "./TodoApp";
 import TodoApp from "./TodoApp";
 
 

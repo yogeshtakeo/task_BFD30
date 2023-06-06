@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     background-image: url('./todo.jpg');
-    background-position: cover; 
+    background-position: center; 
 }
 
 .title{
@@ -104,3 +104,9 @@
     flex-direction: row;
     color: black;
 }
+
+.checkB{
+    height: 25px;
+    width: 50px;
+}
+

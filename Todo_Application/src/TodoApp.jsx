@@ -32,15 +32,21 @@ function TodoApp() {
     <>
       <div className="main">
         <h1>To Do Lists </h1>
+
         <button className="button">ADD</button>
         <div className="todolist">
           {todo.map((tasks) => (
             <div className="tasks" key={tasks.id}>
               <ul>
-                <li>{tasks.id}</li>
+                <li>{tasks.id}.</li>
                 <li>{tasks.title}</li>
-                <input type="checkbox" id="check" />
-                <button className="cross-button">x</button>
+                <li>
+                  <input type="checkbox" id="check" />
+                  <link
+                    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+                    rel="stylesheet"></link>
+                  <i class="material-icons">delete</i>
+                </li>
               </ul>
             </div>
           ))}

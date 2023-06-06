@@ -65,7 +65,7 @@ function TodoApp() {
             placeholder="Add to the list"
           />
           <button className="addButton" onClick={addTask}>
-            add ++
+            ADD
           </button>
         </div>
 
@@ -80,7 +80,7 @@ function TodoApp() {
                   <input
                     className="checkMark"
                     type="checkbox"
-                    checked={list.completed}
+                    onClick={list.completed}
                     onChange={(e) => setnewTask(e.target.value)}
                   />
                 </li>

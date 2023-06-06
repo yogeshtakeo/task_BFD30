@@ -23,15 +23,7 @@ function TodoApp() {
           
         }, []);
 
-        const addNewTask= () => {
-            const newList = {
-                id: 1,
-                title: taskName,
-                completed: false,
-                date: new Date().toTimeString().split(" ")[0],
-            };
-            
-        };
+       
 
 
         return (
@@ -48,7 +40,7 @@ function TodoApp() {
                                 type="text"
                                 placeholder="Add new task here"/>
                             {/* <input type="submit"/> */}
-                            <button className="addButton" onClick={addNewTask}>Add to list</button>
+                            <button className="addButton">Add to list</button>
                         </div>
                     
                     

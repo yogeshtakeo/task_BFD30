@@ -1,4 +1,4 @@
-import { useState , useEffect } from 'react'
+import React, { useState , useEffect } from 'react'
 import './App.css'
 
 function App() {
@@ -6,11 +6,11 @@ function App() {
   const [newState, setNewState] = useState('')
 
     useEffect(() => {
-      fetchData()
+      handleAddState()
     }, []) 
 
     async function fetchData() =>  {
-      const jsonObj = await fetch('https://jsonplaceholder.typicode.com/todos/')
+      let jsonObj = await fetch('https://jsonplaceholder.typicode.com/todos/')
       jsonObj .then(
         const jsObj = await jsonObj.json()
         setState(jsObj)
@@ -23,8 +23,8 @@ function App() {
         id: state.length + 1, 
         title: newState,
         completed: false,
+        console.log(newStateObj)
       }
-  
     }
     setState([...tasks, newStateObj])
     setNewState('')

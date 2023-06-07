@@ -1,42 +1,83 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.head header{
+    height:40px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    color:black;
+    border-style: solid;
+    border-color: black;
+}   
+
+.mainNav ul{
+    background-color: whitesmoke;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    /* color: black; */
+    justify-content: space-evenly;
+    padding-right:40px;
+    padding-left: 0;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 2.4px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.main{
+    background-image: url("https://images.freecreatives.com/wp-content/uploads/2016/04/Awesome-Website-Background1.jpg");
+    background-repeat: no-repeat;
+    background-size:100vw 100vh;
+    height: 100vh;
+    width:100vw;
+    border-style: solid;
+    border-color: black;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title h3{
+    position: relative;
+    left:20px;
+    align-items: center;
+    justify-content: center;
+    color:black;
+    padding-top: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.content{
+    padding:70px 20px 0 20px;
+    color:black;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    height: 50px;
+    max-width:max-content;
+
 }
 
-.card {
-  padding: 2em;
+#button{
+    background-color:transparent;
 }
 
-.read-the-docs {
-  color: #888;
+button.delete{
+    background-color: transparent;
+   position: fixed;
+   left:300px;
+    color:black;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
+
+body{
+    background-color: transparent;
+}
+
+img{
+    position:fixed;
+    top:180px;
+    right:20px;
+    height:400px;
+
 }

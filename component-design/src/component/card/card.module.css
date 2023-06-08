@@ -1,0 +1,28 @@
+.background{
+    margin: 5px;
+    background-color: rgb(249, 220, 220);
+    border-radius: 15px;
+    text-align: center;
+    width: 350px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.name {
+    margin: 2px;
+    color: rgb(96, 19, 19);
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  }
+  
+  .pic {
+    margin-top: 5px;
+    height: 150px;
+    width: 140px;
+    border: solid 2px;
+    border-color: rgb(18, 79, 74);
+    border-radius: 8%;
+    
+  }

@@ -1,31 +1,42 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
-  const [state, setState] = useState([])
+// // function App() {
+// //   const [state, setState] = useState({})
+// //   const [error, setError] = useState('')
 
-  useEffect
+// //   useEffect(() => {
+// //     const getGithubInfo = async () => {
+// //       try{
+// //         const jsonObject = await fetch("https://api.github.com/users/babisha")
+// //         const jsObject = await jsonObject.json()
+
+// //         setState(jsObject)
+// //          } catch(error) {
+// //       setError('You got an error, my friend!')
+// //          }
+// //     }
+
+// //     getGithubInfo()
+
+// //   }, [])
 
 
-  const fetchData = fetch("https://api.github.com/users/babisha")
+  
 
-  fetchData
-  .then((response) => response.json())
-  .then((json) => {
-    setState(json)
-  })
-  .catch((error) => console.log("This is an error", error))
-
-  return (
-    <>
-      <div>{state?.login}</div>
-      <div>{state?.followers_url}</div>
-      <img src="https://avatars.githubusercontent.com/u/23157110?v=4" alt="avatar.url" />
-      
-    </>
-  )
-}
+// //   return (
+// //     <>
+// //       <div className="wrapper">
+// //          <div className='card'>
+// //             <h2>GITHUB : <button onclick = {state.url}>{state.login}</button></h2>
+// //             <img className='babisha' src={state.avatar_url}/>
+// //             <h3>{state.login} has about {state.followers} followers. She started her coding journey in {state.location}.</h3>
+// //         </div>
+// //       </div>
+// //     </>
+//   )
+// }
 
 export default App

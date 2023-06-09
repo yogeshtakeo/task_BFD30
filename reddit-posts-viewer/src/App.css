@@ -1,0 +1,57 @@
+body{
+  display: flex;
+  justify-content: center;
+  
+}
+.outline{
+  width:40rem;
+  height:80rem;
+  background-color: azure;
+  border: solid;
+  
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+  border: solid;
+  align-items: center;
+  text-align: center;
+}
+.left{
+  display:flex;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+button{
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+
+.right{
+  display:flex;
+ 
+}
+li{
+  list-style: none;
+  margin-left: 0.5rem;
+}
+.img1{
+  margin-left: 0.5rem;
+}
+.page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: aquamarine;
+  margin:2rem ;
+}
+.meme{
+  border:solid;
+}
+p,h4{
+  margin-right: auto;
+}

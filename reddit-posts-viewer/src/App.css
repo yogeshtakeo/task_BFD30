@@ -32,6 +32,7 @@ button{
   justify-content: center;
   align-items: center;
   margin-left: 0.5rem;
+  padding-left: 1rem;
 }
 
 .right{

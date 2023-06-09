@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import "./app.css";
 
 function GetReddit() {
   const [state, setState] = useState({});
@@ -25,14 +26,16 @@ function GetReddit() {
   return (
     <>
       {/* the ? operator is optional chaining operator which check the codition for object if its undefined nor null */}
-      <div className="main">
+      <div className="wrapper">
         {state?.data?.children?.map((posts) => (
-          <div className="card" key={posts.data.id}>
-            <h2>{posts.data.title}</h2>
-            <div className="picture">
-              <img src={posts.data.thumbnail} />
+          <div className="main" key={posts.data.id}>
+            <div className="card">
+              <h4>Topics: {posts.data.subreddit}</h4>
+              <h3>{posts.data.title}</h3>
+              <div className="picture">
+                <img src={posts.data.thumbnail} />
+              </div>
             </div>
-            <h4>{posts.data.subreddit}</h4>
           </div>
         ))}
 

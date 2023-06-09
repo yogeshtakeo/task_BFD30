@@ -8,10 +8,18 @@ function App() {
   return (
     <>
       <div className="header">
-        <h1>Popular Posts Of Reddit</h1>
+        <div className="logo"></div>
+        <h2>Falsy Reddit</h2>
         <input type="text" name="search" id="search-bar" placeholder="search" />
+        <button className="login-button">Login</button>
       </div>
-      <GetReddit />
+      <div className="section">
+        <div className="ads">this is ads section</div>
+        <div className="trending">
+          <h2>Treding Today</h2>
+          <GetReddit />
+        </div>
+      </div>
     </>
   );
 }

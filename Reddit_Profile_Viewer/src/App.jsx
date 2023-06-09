@@ -7,6 +7,10 @@ import GetReddit from "./GetReddit.jsx";
 function App() {
   return (
     <>
+      <div className="header">
+        <h1>Popular Posts Of Reddit</h1>
+        <input type="text" name="search" id="search-bar" placeholder="search" />
+      </div>
       <GetReddit />
     </>
   );

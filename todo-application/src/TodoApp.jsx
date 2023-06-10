@@ -41,14 +41,14 @@ function TodoApp() {
   };
   const deleteTask = (id) => {
     //the filter will check the id in newArray is not equal to the one we clicked.
-    const newArray = task.slice(0,5).filter((item) => item.id !== id); //we will create newArray will have task excluding the task we want to delete
+    const newArray = task.filter((item) => item.id !== id); //we will create newArray will have task excluding the task we want to delete
     setTask(newArray); // updates our array onClick
   };
 
   return (
     <>
       <div className="outline">
-        <h1>To Do lists</h1>
+        <h1>To Do Lists</h1>
         <h3>Plan your day and Stay ahead!</h3>
         <div className="box">
           <input
@@ -80,7 +80,7 @@ function TodoApp() {
                 </div>
 
                 <div className="cross">
-                  <button className="dbtn" onClick={deleteTask}>
+                  <button className="dbtn" onClick={()=>deleteTask(items.id) }>
                     X
                   </button>
                 </div>

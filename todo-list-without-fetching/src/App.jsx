@@ -1,15 +1,13 @@
 import { useState } from 'react'
 import './App.css'
-import './components/AddTask'
-import './components/DeleteTask'
-import './components/EditTask'
+import TodoList from './TodoList'
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
     <>
-      
+      <TodoList/>
     </>
   )
 }

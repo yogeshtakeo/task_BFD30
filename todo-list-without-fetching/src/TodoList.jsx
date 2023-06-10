@@ -1,19 +1,39 @@
 import React from 'react'
-import { useEffect,useState } from 'react'
+import {useState } from 'react'
+
 
 const TodoList = () => {
     //useState to update list with new tasks.
-    const[list, setList]=useState['']
+    const[list, setList]=useState([])
+    //useState to update newTask
+    const[newTask, setNewTask]=useState('')
 
     const handleChange=(event)=>{
-        setList(e.target.value)
+        setNewTask(event.target.value)
     }
 
-  return (
-    
-    <input type="text" placeholder='Add New Tasks' onChange={handleChange}>
+    const addTask=()=>{
+        const tasks={id:list.length+1, title:newTask, completed:false}
+        setList([...list, tasks])
+        
+        setNewTask('')
+        
+    }
+    console.log(list)
 
-    </input>
+  return (
+    <>
+    <input type="text" placeholder='Add New Tasks' value={newTask} onChange={handleChange}/>
+
+     <button onClick={addTask}>Submit</button> 
+     
+       {list?.map((lists)=>(
+       <li key={lists.id}>
+        {lists.id}
+        {lists.title}
+        </li>))}
+     
+     </>
   )
 }
 

@@ -28,7 +28,12 @@ function GetReddit() {
       {/* the ? operator is optional chaining operator which check the codition for object if its undefined nor null */}
       <div className="wrapper">
         {state?.data?.children?.map((posts) => (
-          <div className="main" key={posts.data.id}>
+          <div
+            className="main"
+            key={posts.data.id}
+            onClick={() => {
+              window.location.href = posts.data.url;
+            }}>
             <div className="card">
               <h4>Topics: {posts.data.subreddit}</h4>
               <h3>{posts.data.title}</h3>

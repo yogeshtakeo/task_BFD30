@@ -14,7 +14,7 @@ function App() {
         <button className="login-button">Login</button>
       </div>
       <div className="section">
-        <div className="ads">this is ads section</div>
+        <div className="ads">This is ads section</div>
         <div className="trending">
           <h2>Treding Today</h2>
           <GetReddit />

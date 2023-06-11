@@ -1,4 +1,14 @@
 body{
     display: flex;
     justify-content: center;
+    background: linear-gradient(to right, rgb(246, 243, 243), rgba(255, 157, 0, 0.493),white);
+    width:100%;
+    
+}
+.input{
+    border:white;
+}
+.h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
 }

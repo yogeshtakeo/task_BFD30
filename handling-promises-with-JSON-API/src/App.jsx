@@ -1,6 +1,7 @@
 import "./App.css";
 
 function App() {
+
   //1. Make API request and handle promise
 
   //Fetch function to make a GET request to chosen API endpoint.
@@ -23,7 +24,9 @@ function App() {
     .catch((error) => {
       console.error("Error", error);
     });
+    
     //2. Handle Promise Rejection
+
   const wrongdataFetch = fetch("https://jsonplaceholder.typicode.com/pot");
   console.log(wrongdataFetch);
   wrongdataFetch

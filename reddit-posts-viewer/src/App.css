@@ -1,15 +1,17 @@
-body{
+body {
   display: flex;
   justify-content: center;
-  
+
 }
-.outline{
-  width:40rem;
+
+.outline {
+  width: 40rem;
   background-color: rgb(245, 251, 251);
   border: solid;
   border-radius: 2rem;
 }
-.nav{
+
+.nav {
   display: flex;
   justify-content: space-between;
   border: solid;
@@ -19,14 +21,16 @@ body{
   border-left: none;
   border-right: none;
   border-width: 1px;
-  
+
 }
-.left{
-  display:flex;
+
+.left {
+  display: flex;
   align-items: center;
   margin-right: 0.5rem;
 }
-button{
+
+button {
   font-size: 20px;
   display: flex;
   justify-content: center;
@@ -35,60 +39,68 @@ button{
   padding-left: 1rem;
 }
 
-.right{
-  display:flex;
- 
+.right {
+  display: flex;
+
 }
-li{
+
+li {
   list-style: none;
   margin-left: 0.5rem;
 }
-.img1{
+
+.img1 {
   margin-left: 0.5rem;
 }
 
-.page{
+.page {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+  border: solid;
   padding-left: 2rem;
   padding-right: 2rem;
-  
-  margin-right:auto;
+  border-width: 1px;
+  margin-right: auto;
 }
-.img2{
-  width:100%;
+
+.img2 {
+  width: 100%;
 }
-.meme{
-  border:solid;
+
+.meme {
+  border: solid;
   border-radius: 0.5rem;
   border: transparent;
   background-color: rgba(227, 226, 226, 0.53);
   display: flex;
   justify-content: center;
   align-items: center;
-  height:auto;
+  height: auto;
   padding: 1rem;
 }
-.reactions ul{
+
+.reactions ul {
   display: flex;
   justify-content: space-between;
-  
+
 }
 
 
-p,h4{
+p,
+h4 {
   margin-right: auto;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-bottom: 0;
   margin-top: 0;
   padding-top: 0.5rem;
 }
-p{
+
+p {
   font-size: 20px;
 }
-h4{
+
+h4 {
   font-size: larger;
 }

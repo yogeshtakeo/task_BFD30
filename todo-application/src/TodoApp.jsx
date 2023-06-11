@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import todo from "./Todo.jpg";
 
 function TodoApp() {
+  //TOdoAPP with fetching from API.
   //useState--> updates states in real time.
   const [task, setTask] = useState([]); //this will update task from input we fetched through API.
 

@@ -6,7 +6,6 @@ import {RiArrowDropDownLine} from 'react-icons/ri'
 import{BsSearch} from 'react-icons/bs'
 import{BiUpvote,BiDownvote,BiComment,BiShare} from 'react-icons/bi'
 import logo from './reddit-logo.png'
-import meme from './meme.jpg'
 
 function App() {
   //useState to update the state

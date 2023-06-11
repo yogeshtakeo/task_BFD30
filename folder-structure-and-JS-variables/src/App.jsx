@@ -9,11 +9,11 @@ function App() {
   const Arraynums = [1, 2, 3, 4]
   const result = Arraynums.map(doublenum)
   console.log(result);
-  //Array Destructuring
-  ArrDes()
   
-  //Object Destructuring
+  ArrDes()
   ObjDes()
+  //Object Destructuring
+  
 
 
 //Rest Parameters
@@ -40,7 +40,7 @@ console.log(combinedarray)
   return <>
   <h1>Vision</h1>
   <div className="outline">
-   
+   {Images.first}
   </div>
   </>;
 }

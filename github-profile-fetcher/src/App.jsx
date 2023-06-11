@@ -19,7 +19,10 @@ import './App.css'
   return (
     <>
    
-      <Profiles/>     
+      <Profiles/>
+      
+          
+          
           
     </>
   )

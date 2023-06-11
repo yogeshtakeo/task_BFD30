@@ -1,6 +1,7 @@
 import "./App.css";
 
 function App() {
+  //API-Application Program Interface
   //1. Make API request and handle promise
 
   //Fetch function to make a GET request to chosen API endpoint.

@@ -51,16 +51,11 @@ const TodoList = () => {
 
   return (
     <>
-<<<<<<< HEAD
      <div className="Box w-96 h-96 flex flex-col justify-center items-center m-8 rounded-lg
                    border-orange-500 border-2 bg-gradient-to-l from-slate-100 to-orange-400">
         <h1 className=" h1 mb-1 text-black text-lg">ToDo Lists</h1>
         <h4 className="h4 mb-2">Start getting things done...</h4>
         <div className="input mb-3 w-80 flex justify-center">
-=======
-      <div className="outline flex flex-col items-center justify-center h-auto w-96 m-2 p-2 bg-slate-600">
-        <div className="input bg-purple-400 p-1">
->>>>>>> parent of 847bba3 (Task 14: Tailwind css layouts)
           <input
             className="text-sm placeholder:italic border rounded-sm w-64 p-1 pl-2"
             type="text"

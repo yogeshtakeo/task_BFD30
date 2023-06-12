@@ -26,7 +26,6 @@ function TodoApp() {
 
     getData();
   }, []);
-  // function AddTask() {}
 
   return (
     <>

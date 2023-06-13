@@ -4,9 +4,9 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  let state ={};
+  const [state, setState] = useState({});
 
-  console.log(state)
+  useEffect = () => 
 
   const popReddit = async() => {
     const jsonObject = await fetch("https://www.reddit.com/r/popular.json")
@@ -17,6 +17,7 @@ function App() {
 
   return (
     <>
+    <div> </div>
       
     </>
   )

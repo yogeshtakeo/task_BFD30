@@ -6,19 +6,24 @@ import './App.css'
 function App() {
   const [ state, setState] = useState({})
 
-  const number = fetch('https://api.github.com/users/dinakc')
-  .then((jsonObject) => jsonObject.json())
-  .then((jsObject)=> {
-   setState(jsObject)
+  useEffect (() => {
+    const profile = fetch('https://api.github.com/users/dinakc')
+
+  profile
+  .then((response) => {
+    const jsonPromise= response.json()
+  .then((jsPromise)=> {
+   setState(jsPromise)
   })
-  .catch((error) => console.log(error))
-
-
+  console.log('first')
+})
+  .catch((error) => console.log('This is error', error))
+  }, [])
 
 
   return (
     <>
-    <div>{state.login}</div>
+    <div className='name'>{state.login}</div>
     <img  className='deena' src='https://avatars.githubusercontent.com/u/105759959?v=4' alt='deena picture'></img>
       
     </>

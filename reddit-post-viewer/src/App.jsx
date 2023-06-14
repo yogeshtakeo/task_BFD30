@@ -29,27 +29,37 @@ function App() {
 
   return (
     <>
+      <div className="roots">
       <div className="header"><h2>Task 13: Popular Reddit Posts Viewer</h2></div>
       
         
-      
+      <div className="grid1">
         {post?.data?.children?.map((lists) => (
          <>
+         
           <div className="bar">
             <div className="data">
-              <p className="display"><b>{i++}.&nbsp;Title:&nbsp;</b>{lists.data.title}</p>
-              <p className="display"><b>Author:&nbsp; </b>{lists.data.author}</p>
-              <a className="display" href={lists.data.url}>View post</a>
+              <div className="titlebar">
+                
+                  <img className="icon1" src={lists.data.all_awardings[1]?.icon_url}></img>
+                
+                <div>
+              <p className="display"> &nbsp;&nbsp;<b>{i++}.&nbsp;{lists.data.title}</b></p>
+              <p className="displayAuthor">&nbsp;&nbsp;by:&nbsp;{lists.data.author}</p>
+              </div>
+              </div>
+              <div className="displayimg"> 
+                <img className="image" src={lists.data.thumbnail}></img>
+              </div>
             </div>
-            <div className="image"> 
-              image goes here
-            </div>
+            
           </div>
           
           </>  
- 
+        
         ))}  
-      
+     </div> 
+     </div>
     </>
   )
 }

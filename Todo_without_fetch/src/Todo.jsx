@@ -17,6 +17,7 @@ function Todo() {
     const item = {
       id: uuidv4(),
       value: newItem,
+      isCompleted: false,
     };
     //adding new item to the old todo list.
     setItems((oldList) => [...oldList, item]);
@@ -31,6 +32,14 @@ function Todo() {
     let newArray = items.filter((item) => item.id !== id);
     //setting the value of items with new array which does not have
     setItems(newArray);
+  }
+  function ToggleComplete(id) {
+    let toggledTodo = [...items].map((todo) => {
+      if (todo.id === id) {
+        todo.isCompleted = !todo.isCompleted;
+      }
+      return todo;
+    });
   }
   function Edittask() {}
 
@@ -51,6 +60,7 @@ function Todo() {
         {items.map((item) => {
           return (
             <li key={item.id}>
+              <input type="checkbox" onChange={() => ToggleComplete(item.id)} />
               {item.value}
               <button onClick={() => Deletetask(item.id)}>Delete</button>
               <button

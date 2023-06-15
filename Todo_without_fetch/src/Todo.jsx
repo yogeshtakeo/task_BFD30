@@ -9,6 +9,8 @@ function Todo() {
   //array to hold all the new added task
   const [items, setItems] = useState([]);
 
+  //to edit
+  const [edit, setEdit] = useState();
   //function that is called when add button is clicked
   function Addtask() {
     //create unique id using uuidv
@@ -30,6 +32,7 @@ function Todo() {
     //setting the value of items with new array which does not have
     setItems(newArray);
   }
+  function Edittask() {}
 
   return (
     <>
@@ -47,12 +50,16 @@ function Todo() {
       <ul>
         {items.map((item) => {
           return (
-            <>
-              <li key={item.id}>
-                {item.value}
-                <button onClick={() => Deletetask(item.id)}>Delete</button>
-              </li>
-            </>
+            <li key={item.id}>
+              {item.value}
+              <button onClick={() => Deletetask(item.id)}>Delete</button>
+              <button
+                onClick={() => {
+                  setEdit(true);
+                }}>
+                Edit
+              </button>
+            </li>
           );
         })}
       </ul>

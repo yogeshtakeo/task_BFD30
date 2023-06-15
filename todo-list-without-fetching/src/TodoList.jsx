@@ -1,5 +1,8 @@
 import React from "react";
 import { useState } from "react";
+import { MdCancel } from "react-icons/md";
+import { AiFillEdit } from "react-icons/ai";
+import { BiCheckbox, BiCheckboxChecked } from "react-icons/bi";
 
 const TodoList = () => {
   //useState to update the list with new tasks.
@@ -52,47 +55,66 @@ const TodoList = () => {
   return (
     <>
      <div className="Box w-96 h-96 flex flex-col justify-center items-center m-8 rounded-lg
-                   border-orange-500 border-2 bg-gradient-to-l from-slate-100 to-orange-400">
+                   border-orange-500 border-2 bg-gradient-to-l from-slate-100 to-orange-400
+                    md:flex flex-row">
         <h1 className=" h1 mb-1 text-black text-lg">ToDo Lists</h1>
         <h4 className="h4 mb-2">Start getting things done...</h4>
         <div className="input mb-3 w-80 flex justify-center">
           <input
-            className="text-sm placeholder:italic border rounded-sm w-64 p-1 pl-2"
+          className=" input text-sm placeholder:italic rounded-md shadow-md shadow-orange-500 w-80 h-9 pl-2 mr-2"
             type="text"
             placeholder="Add New Tasks"
             value={newTask}
             onChange={handleChange}
           />
           <button
-            className="border p-1 rounded-md pl-4 pr-4 bg-slate-400"
+           className="border-orange-500 border-2 shadow-md shadow-white text-white rounded-xl pl-3 pr-3 w-22 h-9 bg-orange-500"
             onClick={isEditing ? editTask : addTask}
           >
-            {isEditing ? "Update" : "Submit"}
+             {isEditing ? <AiFillEdit size={22} /> : "Submit"}
           </button>
         </div>
-        <div className="listBox bg-green-300 w-80 m-2">
-        {list?.map((lists) => (
-          <ul className="lists list-none mr-auto mb-1">
-          <li key={lists.id}>
-            {lists.id}
-            {lists.title}
-            <button onClick={() => deleteTask(lists.id)}>X</button>
-            <button
-              onClick={() => {
-                setNewTask(lists.title);
-                setIsEditing(true);
-                setEditItemID(lists.id);
-              }}
-            >
-              update
-            </button>
-            <button onClick={() => handleComplete(lists.id)}>
-              {lists.completed ? "Completed" : "Incompleted"}
-            </button>
-          </li>
-          </ul>
-        ))}
-      </div>
+        <div className="listBox relative w-80 m-2">
+          {list?.map((lists) => (
+            <ul className="lists list-none mr-auto mb-2 flex border-2 border-orange-600 rounded-md ">
+              <li
+                className="li flex justify-center items-center pl-2 text-"
+                key={lists.id}
+              >
+                <span className="span mr-2">{lists.id})</span>
+                {lists.title}
+                <div className="f  flex justify-center w-32 h-6 right-0 absolute text-right items-center ">
+                  <button
+                    className="button ml-8 bg-orange-600"
+                    onClick={() => deleteTask(lists.id)}
+                  >
+                    <MdCancel color="white" size={22} />
+                  </button>
+                  <button
+                    className=" bg-orange-600 ml-1"
+                    onClick={() => {
+                      setNewTask(lists.title);
+                      setIsEditing(true);
+                      setEditItemID(lists.id);
+                    }}
+                  >
+                    <AiFillEdit color="white" size={22} />
+                  </button>
+                  <button
+                    className=" bg-orange-600 ml-1"
+                    onClick={() => handleComplete(lists.id)}
+                  >
+                    {lists.completed ? (
+                      <BiCheckboxChecked color="white" size={22} />
+                    ) : (
+                      <BiCheckbox color="white" size={22} />
+                    )}
+                  </button>
+                </div>
+              </li>
+            </ul>
+          ))}
+        </div>
       </div>
     </>
   );

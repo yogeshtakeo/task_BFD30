@@ -8,10 +8,14 @@ function Todo() {
   const [newItem, setNewItem] = useState("");
   //array to hold all the new added task
   const [items, setItems] = useState([]);
-
   //to edit
-  const [edit, setEdit] = useState();
+  // const [edit, setEdit] = useState();
+  const [editTodo, setEditTodo] = useState(false);
+
+  const [edit, setEdit] = useState("");
+
   //function that is called when add button is clicked
+
   function Addtask() {
     //create unique id using uuidv
     const item = {
@@ -26,6 +30,9 @@ function Todo() {
     console.log(items);
   }
 
+  function InputHandler(event) {
+    setNewItem(event.target.value);
+  }
   //funtion to call to delete task
   function Deletetask(id) {
     //creating new array which contains every task except the deleted
@@ -33,6 +40,7 @@ function Todo() {
     //setting the value of items with new array which does not have
     setItems(newArray);
   }
+  //this function toggles true to false and false to true when checkbox is changed
   function ToggleComplete(id) {
     let toggledTodo = [...items].map((todo) => {
       if (todo.id === id) {
@@ -40,8 +48,25 @@ function Todo() {
       }
       return todo;
     });
+    setItems(toggledTodo);
   }
-  function Edittask() {}
+  function HandleUpdate(id) {
+    // const updatedTodo = {
+    //   id,
+    //   value,
+    // };
+    const updatedTodos = items.map((item) =>
+      item.id === id ? { ...item, value: newItem } : item
+    );
+
+    // const updatedTodos = items.map((todo) =>
+    //   todo.id === id ? updatedTodo : todo
+    // );
+    setItems(updatedTodos);
+    setNewItem("");
+    console.log(updatedTodos);
+    setEditTodo();
+  }
 
   return (
     <>
@@ -49,27 +74,38 @@ function Todo() {
       <input
         type="text"
         placeholder="Enter the task"
+        onChange={InputHandler}
         value={newItem}
-        onChange={(e) => setNewItem(e.target.value)}
+        // onChange={(e) => setNewItem(e.target.value)}
       />
-      <button className="button" onClick={Addtask}>
-        Add Task
+      <button
+        className="button"
+        onClick={editTodo ? () => HandleUpdate(edit) : Addtask}>
+        {editTodo ? "Update" : "Add todo"}
       </button>
 
       <ul>
         {items.map((item) => {
           return (
-            <li key={item.id}>
-              <input type="checkbox" onChange={() => ToggleComplete(item.id)} />
-              {item.value}
-              <button onClick={() => Deletetask(item.id)}>Delete</button>
-              <button
-                onClick={() => {
-                  setEdit(true);
-                }}>
-                Edit
-              </button>
-            </li>
+            <>
+              <li key={item.id}>
+                <input
+                  type="checkbox"
+                  onChange={() => ToggleComplete(item.id)}
+                  checked={item.isCompleted}
+                />
+                {item.value}
+                <button onClick={() => Deletetask(item.id)}>Delete</button>
+                <button
+                  onClick={() => {
+                    setNewItem(item.value);
+                    setEditTodo(true);
+                    setEdit(item.id);
+                  }}>
+                  Edit
+                </button>
+              </li>
+            </>
           );
         })}
       </ul>

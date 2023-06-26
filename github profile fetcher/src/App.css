@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+    text-align: center;
+    width: 300px;
+    height: 400px;
+    background-color: pink;
+    border-radius: 15%;
+}
+
+.deena{
+    width: 100px;
+    height: 150px;
+    border-radius: 25%;
+}

@@ -1,32 +1,30 @@
-import { useState } from 'react'
+import { useState, useEffect} from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [ state, setState] = useState({})
+  const [ state, setState] = useState({});
 
   useEffect (() => {
-    const profile = fetch('https://api.github.com/users/dinakc')
+  const profile = async () => {
+    const jsonObject = await fetch('https://api.github.com/users/dinakc')
+    const jsObject = await jsonObject.json()
 
-  profile
-  .then((response) => {
-    const jsonPromise= response.json()
-  .then((jsPromise)=> {
-   setState(jsPromise)
-  })
-  console.log('first')
-})
-  .catch((error) => console.log('This is error', error))
+    setState(jsObject)
+}
+  profile()
   }, [])
 
 
   return (
-    <>
-    <div className='name'>{state.login}</div>
-    <img  className='deena' src='https://avatars.githubusercontent.com/u/105759959?v=4' alt='deena picture'></img>
-      
-    </>
+    
+    <div className='main'> 
+    <img className='deena' src= {state.avatar_url}></img>
+    <h2>{state.login}</h2>
+    <h3 className="name">Html_url: "{state.html_url}"</h3> 
+    </div>
+    
   )
 }
 

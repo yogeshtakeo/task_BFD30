@@ -5,13 +5,18 @@ import './App.css'
 
 function App() {
   const [ state, setState] = useState({});
+  const [ error, setError] = useState();
 
   useEffect (() => {
   const profile = async () => {
+    try {
     const jsonObject = await fetch('https://api.github.com/users/dinakc')
     const jsObject = await jsonObject.json()
 
     setState(jsObject)
+  } catch(error) {
+    setError('Something is wrong')
+    }
 }
   profile()
   }, [])
